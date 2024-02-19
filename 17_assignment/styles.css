@@ -1,0 +1,185 @@
+/* Resetting default margin and padding */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Body styles */
+body {
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(#e7f4ff, #45b796);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* TIU Logo */
+.tiu-logo {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease;
+}
+
+.tiu-logo img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Personal Information */
+.personal-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease;
+}
+
+.photo {
+    flex: 0 0 150px;
+    margin-right: 20px;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details {
+    flex: 1;
+}
+
+/* Experience, Education, Skills, Hobbies, Marks, Contact Details, Additional Information sections */
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    background-color: #eaeaea;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+table th {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Additional Information */
+.additional-info p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust background for smaller devices */
+    body {
+        background: linear-gradient(#e7f4ff, #45b796);
+    }
+
+    .content {
+        padding: 20px;
+    }
+    
+    .personal-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .photo {
+        margin-bottom: 20px;
+    }
+    
+    section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tiu-logo img {
+        width: 120px;
+    }
+}
