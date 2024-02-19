@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo (1).png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to the Comment Box</h1>
+    </header>
+
+    <div class="content">
+        <section class="intro-section">
+            <h2>About Us</h2>
+            <p>Welcome to our platform where you can share your thoughts and opinions with others. We value your
+                feedback and encourage meaningful discussions.</p>
+        </section>
+
+        <h2 class="comment-section-title">Please Enter Your Comment</h2> <!-- Added comment section title -->
+
+        <div class="comment-container">
+            <textarea id="commentInput" placeholder="Enter your comment"></textarea>
+            <button onclick="addComment()">Add Comment</button>
+            <h2 class="comment-section-titlee">Comment Section</h2>
+            <div id="commentSection" class="comment-section"></div>
+        </div>
+
+        <section class="recent-comments">
+            <h2>Recent Comments</h2>
+            <ul>
+                <li>User123: "Great platform for discussion!"</li>
+                <li>AnonymousUser: "I love the simplicity of this site."</li>
+                <li>Commenter456: "Keep up the good work!"</li>
+            </ul>
+        </section>
+
+        <section class="purpose-section">
+            <h2>Our Purpose</h2>
+            <p>Our platform aims to foster constructive conversations and provide a safe space for sharing diverse
+                viewpoints. We believe in the power of community-driven discussions to drive positive change.</p>
+        </section>
+
+        <section class="testimonials-section">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial">
+                <p>"I've been using this platform for months and it's been an amazing experience. I've learned so much
+                    from the discussions here!"</p>
+                <p class="testimonial-author">- Narendra Modi, avid user</p>
+            </div>
+            <div class="testimonial">
+                <p>"This site has helped me connect with like-minded individuals and engage in meaningful conversations.
+                    Highly recommended!"</p>
+                <p class="testimonial-author">- Osama Bin Laden, community member</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Comment Box. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

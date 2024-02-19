@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Welcome to our Image Slider</h1>
+            <p class="header-description">Explore stunning images with our interactive slider</p>
+        </div>
+    </header>
+    
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+                <img src="image4.jpg" alt="Image 4">
+                <img src="image5.jpg" alt="Image 5">
+                <img src="image6.jpg" alt="Image 6">
+                <!-- Add more images as needed -->
+            </div>
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+        <!-- Dots to indicate current slide -->
+        <div class="dot-container">
+            <!-- Add dots dynamically using JavaScript -->
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">About our Image Slider</h2>
+            <p class="section-description">Our image slider provides an immersive way to showcase a collection of images. With intuitive navigation buttons and visual indicators, users can easily browse through the images and enjoy a seamless viewing experience.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2024 Image Slider. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .message-box {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .message-box h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .message-box p {
+            margin: 0 0 30px;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .message-box button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .message-box button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="message-box">
+        <h2>Age Verification</h2>
+        <p>Please enter your age:</p>
+        <button onclick="verifyAge()">Verify Age</button>
+    </div>
+
+    <script>
+        // Function to verify age
+        function verifyAge() {
+            // Prompt the user to enter their age
+            var age = prompt("Please enter your age:");
+
+            // Check if age is not null (user clicked Cancel)
+            if (age !== null) {
+                // Convert age to a number
+                age = parseInt(age);
+
+                // Check if age is less than 18
+                if (age < 18) {
+                    // Display message for underage users
+                    alert("Sorry, you are not authorized to enter.");
+                } else {
+                    // Display message for users 18 or older
+                    alert("Hello, welcome to the site.");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

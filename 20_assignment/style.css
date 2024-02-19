@@ -1,0 +1,150 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Footer */
+.header, .footer {
+    background: linear-gradient(135deg, #4b6cb7, #182848); /* Gradient with vibrant colors */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff; /* White text color */
+}
+
+.header-description {
+    font-size: 1.2rem;
+    color: #fff; /* White text color */
+}
+
+/* Slider */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.slider {
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    justify-content: center; /* Align items horizontally at the center */
+}
+
+.slides img {
+    max-width: 100%; /* Ensure images retain their aspect ratio */
+    height: 300px; /* Set a fixed height */
+    display: block;
+    transition: transform 0.5s ease;
+    object-fit: cover; /* Ensure images cover the entire space */
+}
+
+/* Navigation Buttons */
+/* Navigation Buttons */
+.prev, .next {
+    background: linear-gradient(135deg, #4b6cb7, #182848); /* Vibrant orange color */
+    border: none;
+    border-radius: 50%; /* Rounded buttons */
+    padding: 15px 17px; /* Equal padding on all sides */
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 2rem;
+    color: #fff; /* White text color */
+    z-index: 2;
+}
+
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background: linear-gradient(135deg, #4270db, #0dcbec); /* Darker shade of orange on hover */
+}
+
+/* Image Hover Effects */
+.slides img:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray text color */
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: #666; /* Light gray text color */
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-text {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .slides img {
+        height: auto; /* Allow images to adjust their height */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-title {
+        font-size: 2rem; /* Adjust header title size */
+    }
+    .header-description {
+        font-size: 1rem; /* Adjust header description size */
+    }
+    .section-title {
+        font-size: 1.5rem; /* Adjust section title size */
+    }
+    .section-description {
+        font-size: 0.9rem; /* Adjust section description size */
+    }
+}
