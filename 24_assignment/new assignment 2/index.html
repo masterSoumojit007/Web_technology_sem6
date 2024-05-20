@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Example</title>
+    <style>
+        body {
+            margin: auto;
+            width: 500px;
+            font-family: Arial, sans-serif;
+        }
+
+        .forms-container {
+            box-shadow: 0 4px 8px rgba(26, 26, 26, 0.3);
+            padding: 20px 40px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .light-grey {
+            color: #7f7e7e;
+        }
+
+        #loginForm label {
+            padding: 4px;
+        }
+
+        #registrationForm label {
+            padding: 4px;
+        }
+
+        #contactForm label {
+            padding: 4px;
+        }
+
+        #subject {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="forms-container">
+        <h1 class="center">Forms Example</h1>
+        <p class="light-grey">This page demonstrates various forms and form elements:</p>
+        <form id="loginForm">
+            <h2>Login Form</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <input type="submit" value="Login">
+        </form>
+        <hr>
+        <form id="registrationForm">
+            <h2>Registration Form</h2>
+            <label for="username_reg">Full Name:</label>
+            <input type="text" id="username_reg" name="username_reg">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <label for="password_reg">Password:</label>
+            <input type="password" id="password_reg" name="password_reg">
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <hr>
+
+        <form id="contactForm">
+            <h2>Contact Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject">
+                <option value="" disabled selected>Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="billing">Billing Issue</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+        </form>
+
+
+        <form id="newsletterForm">
+            <input type="checkbox" value="Send">
+            <p style="font-weight: bold">Subscribe to newsletter</p>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+
+</html>
