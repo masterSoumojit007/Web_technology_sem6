@@ -3,37 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
     <title>Comment Box</title>
     <style>
-        /* CSS Styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 20px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-        /* Style for the heading */
         h1 {
             text-align: center;
             color: #007bff;
-            /* Blue color for the heading */
             margin-bottom: 20px;
-            /* Add some bottom margin for spacing */
             text-transform: uppercase;
-            /* Transform the text to uppercase */
             letter-spacing: 2px;
-            /* Add letter spacing for emphasis */
             margin-right: 18px;
-            /* Add some right margin for spacing */
         }
 
-        /* Style for the comment container */
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin: 5px 0;
+        }
+
         .comment-container {
             width: 400px;
             padding: 20px;
@@ -43,12 +42,10 @@
             transition: box-shadow 0.3s ease;
         }
 
-        /* Hover effect for the comment container */
         .comment-container:hover {
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Style for input fields and textarea */
         .comment-container input[type="text"],
         .comment-container textarea {
             width: calc(100% - 40px);
@@ -60,7 +57,6 @@
             outline: none;
         }
 
-        /* Style for the comment button */
         .comment-container button {
             width: 100%;
             padding: 10px;
@@ -73,12 +69,10 @@
             transition: background-color 0.3s ease;
         }
 
-        /* Hover effect for the comment button */
         .comment-container button:hover {
             background-color: #0056b3;
         }
 
-        /* Style for individual comments */
         .comment {
             background-color: #f9f9f9;
             padding: 10px;
@@ -88,19 +82,16 @@
             transition: box-shadow 0.3s ease;
         }
 
-        /* Hover effect for individual comments */
         .comment:hover {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Style for comment text */
         .comment p {
             margin: 0;
             font-size: 14px;
             color: #333;
         }
 
-        /* Style for comment information (e.g., commenter name and date) */
         .comment .comment-info {
             font-size: 12px;
             color: #999;
@@ -110,67 +101,39 @@
 </head>
 
 <body>
-    
-    <!-- Heading for the comment box -->
-    <h1>Simple Comment Box</h1>
 
-    <!-- Comment container -->
+    <h2>Soumojit Banerjee</h2>
+    <h2>Id:- 211001001053</h2>
+    <h1>Simple Comment Box</h1>
     <div class="comment-container">
-        <!-- Input field for commenter's name -->
         <input type="text" id="commenterName" placeholder="Your Name">
-        <!-- Textarea for entering the comment -->
         <textarea id="commentText" placeholder="Enter your comment"></textarea>
-        <!-- Button to submit the comment -->
         <button onclick="addComment()">Add Comment</button>
-        <!-- Container to display comments -->
         <div id="commentList"></div>
     </div>
 
-    <!-- JavaScript to handle comment submission -->
     <script>
-        // Function to add a comment
         function addComment() {
-            // Get the value of the commenter's name input field
             var commenterName = document.getElementById('commenterName').value;
-            // Get the value of the comment text input field
             var commentText = document.getElementById('commentText').value;
 
-            // Check if both commenter name and comment text are not empty
             if (commenterName.trim() !== '' && commentText.trim() !== '') {
-                // Get the comment list container
                 var commentList = document.getElementById('commentList');
-
-                // Create a new div element for the comment
                 var commentDiv = document.createElement('div');
-                commentDiv.className = 'comment'; // Set the class attribute for styling
-
-                // Create a new paragraph element for the comment text
+                commentDiv.className = 'comment';
                 var commentParagraph = document.createElement('p');
-                // Create a new div element for commenter information (name and date)
                 var commenterInfo = document.createElement('div');
-                commenterInfo.className = 'comment-info'; // Set the class attribute for styling
-
-                // Get the current date and time
+                commenterInfo.className = 'comment-info';
                 var date = new Date();
                 var dateString = date.toLocaleString();
-
-                // Set the text content of the commenter information div
                 commenterInfo.textContent = commenterName + ' - ' + dateString;
-                // Set the text content of the comment paragraph
                 commentParagraph.textContent = commentText;
-
-                // Append the comment paragraph and commenter information to the comment div
                 commentDiv.appendChild(commentParagraph);
                 commentDiv.appendChild(commenterInfo);
-
-                // Append the comment div to the comment list container
                 commentList.appendChild(commentDiv);
-
-                // Clear the input fields after adding the comment
                 document.getElementById('commenterName').value = '';
                 document.getElementById('commentText').value = '';
             } else {
-                // If either commenter name or comment text is empty, show an alert
                 alert('Please enter your name and a comment.');
             }
         }
